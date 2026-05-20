@@ -137,7 +137,7 @@ export default function SewlauPage() {
         {/* ══ SCREENS ══ */}
         <section className="pd-section pd-section--screens">
           <div className="pd-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px', marginBottom: '48px' }}>
+            <div className="pd-label-row" style={{ marginBottom: '48px' }}>
               <motion.span className="pd-section-label" {...fadeUp(0)}>Processus de création</motion.span>
               <motion.p className="pd-body-text" {...fadeUp(0.05)}>
                 J'ai construit la carte de visite à partir de l'identité graphique déjà existante de Sewlau, en reprenant les couleurs et la typographie définies dans la charte associée au logo, afin de garantir une cohérence visuelle.

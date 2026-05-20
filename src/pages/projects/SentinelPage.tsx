@@ -43,7 +43,7 @@ export default function SentinelPage() {
   return (
     <>
       <Helmet>
-        <title>Sentinel — Kyliann Levesque</title>
+        <title>Sentinel — Célia Antunes</title>
         <meta name="description" content="Sentinel — Application web full-stack de gestion de tickets, pointage et TechHealth. ASP.NET Core, PostgreSQL, React, TypeScript." />
       </Helmet>
 
@@ -142,12 +142,7 @@ export default function SentinelPage() {
         <section className="pd-section" style={{ borderTop: 'none' }}>
           <div className="pd-wrap">
             <motion.span className="pd-section-label" {...fadeUp(0)}>Fonctionnalités</motion.span>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '16px',
-              marginTop: '32px',
-            }}>
+            <div className="pd-features-grid">
               {[
                 { num: '01', title: 'Tableau de bord', desc: 'Vue synthétique de l\'état de l\'équipe : tickets ouverts, urgences, activité récente et indicateurs clés en un coup d\'œil.' },
                 { num: '02', title: 'Vue Kanban', desc: 'Glisser-déposer les tickets entre colonnes de statut. Interface fluide pensée pour le travail quotidien en équipe.' },

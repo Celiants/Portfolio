@@ -139,13 +139,13 @@ export default function FlamCoPage() {
         {/* ══ DÉCOUVERTE DE L'ANCIEN SITE ══ */}
         <section className="pd-section" style={{ borderTop: 'none' }}>
           <div className="pd-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px', marginBottom: '32px' }}>
+            <div className="pd-label-row" style={{ marginBottom: '32px' }}>
               <motion.span className="pd-section-label" {...fadeUp(0)}>Découverte de l'ancien site</motion.span>
               <motion.p className="pd-body-text" {...fadeUp(0.05)}>
                 La première étape du projet a été l'analyse du site existant afin de comprendre ses limites et les attentes des utilisateurs. Les pages produits présentaient uniquement une image et le nom du matériel, sans informations techniques complémentaires, descriptions détaillées ou indications tarifaires. L'interface manquait également de hiérarchie visuelle et de structure, rendant la navigation et l'accès aux contenus moins intuitifs pour les professionnels recherchant des informations rapides et précises.
               </motion.p>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+            <div className="pd-img-row">
               <motion.div {...fadeUp(0.1)}>
                 <BrowserMock src="/assets/projects/flamco/ancien-accueil.png" alt="Ancien site Flam&Co — accueil" />
               </motion.div>
@@ -159,7 +159,7 @@ export default function FlamCoPage() {
         {/* ══ DÉCOUVERTE DU CAHIER DES CHARGES ══ */}
         <section className="pd-section" style={{ borderTop: 'none' }}>
           <div className="pd-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px' }}>
+            <div className="pd-label-row">
               <motion.span className="pd-section-label" {...fadeUp(0)}>Découverte du cahier des charges</motion.span>
               <motion.p className="pd-body-text" {...fadeUp(0.05)}>
                 J'ai ensuite étudié l'ensemble du cahier des charges transmis par Flam &amp; Co, regroupant le catalogue complet des produits, leurs descriptions, caractéristiques et tarifs. L'objectif était de concevoir une plateforme simple et efficace, permettant aux utilisateurs d'accéder facilement aux informations recherchées tout en intégrant des fonctionnalités interactives comme les favoris, le panier ou l'espace client.
@@ -171,7 +171,7 @@ export default function FlamCoPage() {
         {/* ══ RECHERCHE CONCURRENTIELLE ══ */}
         <section className="pd-section" style={{ borderTop: 'none' }}>
           <div className="pd-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px' }}>
+            <div className="pd-label-row">
               <motion.span className="pd-section-label" {...fadeUp(0)}>Recherche concurrentielle</motion.span>
               <motion.p className="pd-body-text" {...fadeUp(0.05)}>
                 Une phase de veille et d'analyse concurrentielle m'a permis d'étudier les codes visuels et les parcours proposés par les sites spécialisés dans l'audiovisuel et la location de matériel professionnel. Cette recherche m'a aidée à identifier les bonnes pratiques en matière d'ergonomie, de navigation produit et de présentation des informations techniques.
@@ -183,13 +183,13 @@ export default function FlamCoPage() {
         {/* ══ CRÉATION DES WIREFRAMES ══ */}
         <section className="pd-section" style={{ borderTop: 'none' }}>
           <div className="pd-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px', marginBottom: '32px' }}>
+            <div className="pd-label-row" style={{ marginBottom: '32px' }}>
               <motion.span className="pd-section-label" {...fadeUp(0)}>Création des wireframes</motion.span>
               <motion.p className="pd-body-text" {...fadeUp(0.05)}>
                 Avant la conception de l'interface finale, j'ai commencé par esquisser différentes idées sur papier afin de structurer les principales pages du site. Cette étape m'a permis d'explorer rapidement plusieurs pistes de navigation et d'organisation des contenus, notamment pour la page d'accueil, pensée autour de visuels immersifs mettant en avant l'univers de l'entreprise ainsi qu'une présentation claire de son activité.
               </motion.p>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+            <div className="pd-img-row">
               <motion.img {...fadeUp(0.05)} src="/assets/projects/flamco/wireframe-01.png" alt="Wireframe caméra" style={{ width: '100%', height: '360px', objectFit: 'contain' }} />
               <motion.img {...fadeUp(0.1)} src="/assets/projects/flamco/wireframe-02.jpg" alt="Wireframe accueil" style={{ width: '100%', height: '360px', objectFit: 'contain' }} />
             </div>
@@ -199,7 +199,7 @@ export default function FlamCoPage() {
         {/* ══ SCREENS ══ */}
         <section className="pd-section pd-section--screens">
           <div className="pd-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px', marginBottom: '48px' }}>
+            <div className="pd-label-row" style={{ marginBottom: '48px' }}>
               <motion.span className="pd-section-label" {...fadeUp(0)}>Conception du site</motion.span>
               <motion.p className="pd-body-text" {...fadeUp(0.05)}>
                 Une fois la structure validée, j'ai conçu l'interface du site en développant une expérience plus fluide, moderne et adaptée aux besoins des professionnels du secteur audiovisuel. Chaque page a été pensée pour valoriser le catalogue produit, faciliter l'accès aux informations techniques et rendre la navigation plus intuitive.

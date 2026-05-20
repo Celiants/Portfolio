@@ -138,7 +138,7 @@ export default function TermetisPage() {
         {/* ══ PROCESSUS DE CONCEPTION ══ */}
         <section className="pd-section" style={{ borderTop: 'none' }}>
           <div className="pd-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px', marginBottom: '32px' }}>
+            <div className="pd-label-row" style={{ marginBottom: '32px' }}>
               <motion.span className="pd-section-label" {...fadeUp(0)}>Processus de conception</motion.span>
               <motion.p className="pd-body-text" {...fadeUp(0.05)}>
                 J'ai commencé par un échange avec la professeure de danse afin de définir précisément les besoins du site vitrine. Cet échange m'a permis de construire une forme de cahier des charges et de clarifier les attentes en termes de contenu, de visibilité des activités et de communication autour des stages et événements.
@@ -155,7 +155,7 @@ export default function TermetisPage() {
         {/* ══ SCREENS ══ */}
         <section className="pd-section pd-section--screens">
           <div className="pd-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px', marginBottom: '48px' }}>
+            <div className="pd-label-row" style={{ marginBottom: '48px' }}>
               <motion.span className="pd-section-label" {...fadeUp(0)}>Conception du site</motion.span>
               <motion.p className="pd-body-text" {...fadeUp(0.05)}>
                 L'interface de la page d'accueil a notamment été pensée autour d'un carrousel mettant en avant les actualités de l'association, afin de créer un point d'entrée dynamique et attractif. Les deux styles de danse enseignés ont également été mis en avant pour permettre une compréhension rapide de l'activité de Termétis dès l'arrivée sur le site.

@@ -136,7 +136,7 @@ export default function KatliDevPage() {
         {/* ══ CONSTRUCTION DE L'IDENTITÉ DE MARQUE ══ */}
         <section className="pd-section" style={{ borderTop: 'none' }}>
           <div className="pd-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px' }}>
+            <div className="pd-label-row">
               <motion.span className="pd-section-label" {...fadeUp(0)}>Construction de l'identité de marque</motion.span>
               <motion.p className="pd-body-text" {...fadeUp(0.05)}>
                 La première étape du projet a consisté à définir l'univers et les services de notre entreprise fictive. Nous avons choisi de développer une agence spécialisée dans le développement d'applications, la maintenance ainsi que la création de sites web et mobiles. Notre ambition était d'accompagner les entreprises dans leur transition numérique à travers une approche accessible et moderne.
@@ -150,7 +150,7 @@ export default function KatliDevPage() {
         {/* ══ RECHERCHE ET CRÉATION DU LOGO ══ */}
         <section className="pd-section" style={{ borderTop: 'none' }}>
           <div className="pd-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px', marginBottom: '32px' }}>
+            <div className="pd-label-row" style={{ marginBottom: '32px' }}>
               <motion.span className="pd-section-label" {...fadeUp(0)}>Recherche et création du logo</motion.span>
               <motion.p className="pd-body-text" {...fadeUp(0.05)}>
                 Pour la conception du logo, j'ai d'abord exploré plusieurs pistes autour de la tête d'un chat afin de représenter directement l'identité de la marque. Cependant, lors des tests sur des formats plus petits, le nom devenait difficilement lisible dans certains documents et supports.
@@ -164,7 +164,7 @@ export default function KatliDevPage() {
         {/* ══ DÉCLINAISONS GRAPHIQUES ══ */}
         <section className="pd-section" style={{ borderTop: 'none' }}>
           <div className="pd-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px', marginBottom: '32px' }}>
+            <div className="pd-label-row" style={{ marginBottom: '32px' }}>
               <motion.span className="pd-section-label" {...fadeUp(0)}>Déclinaisons graphiques</motion.span>
               <motion.p className="pd-body-text" {...fadeUp(0.05)}>
                 Une fois le logo validé, j'ai réalisé différentes déclinaisons pour assurer son utilisation sur plusieurs supports : versions en noir et blanc, adaptations pour petits formats, variations de contraste et tests de lisibilité. Cette étape permettait de garantir une identité visuelle cohérente et facilement exploitable dans tous les contextes de communication.

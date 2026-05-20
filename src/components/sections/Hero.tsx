@@ -22,7 +22,7 @@ export default function Hero() {
             className="hero__content"
             initial={isReturning ? false : { opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             <span className="hero__eyebrow">Designer UX/UI · Rouen</span>
 
@@ -42,7 +42,7 @@ export default function Hero() {
                   className="skill-chip"
                   initial={isReturning ? false : { opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.35, delay: 0.5 + i * 0.07 }}
+                  transition={{ duration: 0.25, delay: 0.2 + i * 0.05 }}
                 >
                   {s}
                 </motion.span>
@@ -55,8 +55,8 @@ export default function Hero() {
             initial={isReturning ? false : { opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 1,
-              delay: 0.2,
+              duration: 0.5,
+              delay: 0.1,
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
           >

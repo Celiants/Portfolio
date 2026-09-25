@@ -4,13 +4,13 @@ import '../../styles/project-detail.css'
 import ProjectNav from '../../components/ui/ProjectNav'
 
 const IMGS = {
-  logo:     '/assets/projects/flamco/logo.png',
-  home:     '/assets/projects/flamco/accueil.png',
-  cart:     '/assets/projects/flamco/panier.png',
-  login:    '/assets/projects/flamco/connexion.png',
-  location: '/assets/projects/flamco/localisation.png',
-  camera:   '/assets/projects/flamco/camera.png',
-  product:  '/assets/projects/flamco/produit.png',
+  logo:     '/assets/projects/flamco/logo.webp',
+  home:     '/assets/projects/flamco/accueil.webp',
+  cart:     '/assets/projects/flamco/panier.webp',
+  login:    '/assets/projects/flamco/connexion.webp',
+  location: '/assets/projects/flamco/localisation.webp',
+  camera:   '/assets/projects/flamco/camera.webp',
+  product:  '/assets/projects/flamco/produit.webp',
 }
 
 const FC_COLORS = [
@@ -147,10 +147,10 @@ export default function FlamCoPage() {
             </div>
             <div className="pd-img-row">
               <motion.div {...fadeUp(0.1)}>
-                <BrowserMock src="/assets/projects/flamco/ancien-accueil.png" alt="Ancien site Flam&Co — accueil" />
+                <BrowserMock src="/assets/projects/flamco/ancien-accueil.webp" alt="Ancien site Flam&Co — accueil" />
               </motion.div>
               <motion.div {...fadeUp(0.15)}>
-                <BrowserMock src="/assets/projects/flamco/ancien-produit.png" alt="Ancien site Flam&Co — produits" />
+                <BrowserMock src="/assets/projects/flamco/ancien-produit.webp" alt="Ancien site Flam&Co — produits" />
               </motion.div>
             </div>
           </div>
@@ -190,8 +190,8 @@ export default function FlamCoPage() {
               </motion.p>
             </div>
             <div className="pd-img-row">
-              <motion.img {...fadeUp(0.05)} src="/assets/projects/flamco/wireframe-01.png" alt="Wireframe caméra" style={{ width: '100%', height: '360px', objectFit: 'contain' }} />
-              <motion.img {...fadeUp(0.1)} src="/assets/projects/flamco/wireframe-02.jpg" alt="Wireframe accueil" style={{ width: '100%', height: '360px', objectFit: 'contain' }} />
+              <motion.img {...fadeUp(0.05)} src="/assets/projects/flamco/wireframe-01.webp" alt="Wireframe caméra" style={{ width: '100%', height: '360px', objectFit: 'contain' }} />
+              <motion.img {...fadeUp(0.1)} src="/assets/projects/flamco/wireframe-02.webp" alt="Wireframe accueil" style={{ width: '100%', height: '360px', objectFit: 'contain' }} />
             </div>
           </div>
         </section>

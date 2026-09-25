@@ -61,7 +61,7 @@ export default function Hero() {
             }}
           >
             <img
-              src="/assets/celia-portrait.png"
+              src="/assets/celia-portrait.webp"
               alt="Portrait de Célia Antunes"
               className="hero__portrait"
             />

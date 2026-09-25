@@ -255,6 +255,60 @@
   object-position: top center;
 }
 
+.pd-browser--spaced {
+  bottom: -32px;
+  width: 86%;
+}
+
+.pd-browser--spaced .pd-browser__screen img {
+  height: auto;
+  aspect-ratio: 1060 / 700;
+  object-fit: cover;
+  object-position: top;
+}
+
+.pd-hero__right--tall {
+  height: 552px;
+}
+
+.pd-visit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  align-self: flex-start;
+  margin-top: 32px;
+  padding: 8px 8px 8px 24px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: var(--pd-accent);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--pd-accent) 25%, transparent);
+  transition: background var(--transition-fast);
+}
+
+.pd-visit-btn:hover {
+  background: color-mix(in srgb, var(--pd-accent) 88%, #000);
+}
+
+.pd-visit-btn__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--pd-accent);
+  background: #fff;
+}
+
+.pd-visit-btn__arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
 /* ══════════════════════════════════════════════════
    PHOTO STACK (scattered screenshots)
 ══════════════════════════════════════════════════ */
@@ -805,6 +859,8 @@
 
   .pd-browser--primary { width: 80%; }
   .pd-browser--secondary { width: 55%; }
+  .pd-browser--spaced { bottom: -16px; width: 82%; }
+  .pd-hero__right--tall { height: 380px; }
 
   .pd-print-frame--primary { width: 76%; }
   .pd-print-frame--secondary { width: 54%; }
@@ -849,31 +905,32 @@
 }
 
 .sn-solo__frame {
-  width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.08);
-  transform: perspective(1200px) rotateY(-10deg) rotateX(3deg);
-  box-shadow:
-    20px 28px 72px rgba(91,79,233,0.20),
-    6px 12px 28px rgba(0,0,0,0.10);
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  width: 135%;
+  flex-shrink: 0;
+  margin-left: -10%;
+  margin-right: -22%;
 }
 
-.sn-solo__frame:hover {
-  transform: perspective(1200px) rotateY(-4deg) rotateX(1deg);
-  box-shadow:
-    10px 20px 60px rgba(91,79,233,0.16),
-    4px 8px 20px rgba(0,0,0,0.08);
+@media (max-width: 1320px) {
+  .sn-solo__frame {
+    width: 118%;
+    margin-left: -8%;
+    margin-right: -6%;
+  }
+}
+
+@media (max-width: 860px) {
+  .sn-solo__frame {
+    width: 112%;
+    margin-left: -6%;
+    margin-right: -6%;
+  }
 }
 
 .sn-solo__frame img {
   display: block;
   width: 100%;
-  height: 400px;
-  object-fit: cover;
-  object-position: top left;
+  height: auto;
 }
 
 /* ══════════════════════════════════════════════════
@@ -915,12 +972,12 @@
 }
 
 .kd-card--a {
-  width: 68%;
+  width: 86%;
   margin-left: 7%;
 }
 
 .kd-card--b {
-  width: 68%;
+  width: 86%;
   margin-right: 7%;
   margin-left: auto;
 }

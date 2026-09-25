@@ -4,10 +4,10 @@ import '../../styles/project-detail.css'
 import ProjectNav from '../../components/ui/ProjectNav'
 
 const IMGS = {
-  home:       '/assets/projects/marvel/accueil.png',
-  persos:     '/assets/projects/marvel/personnages.png',
-  films:      '/assets/projects/marvel/films.png',
-  series:     '/assets/projects/marvel/series.png',
+  home:       '/assets/projects/marvel/accueil.webp',
+  persos:     '/assets/projects/marvel/personnages.webp',
+  films:      '/assets/projects/marvel/films.webp',
+  series:     '/assets/projects/marvel/series.webp',
 }
 
 const COLORS = [

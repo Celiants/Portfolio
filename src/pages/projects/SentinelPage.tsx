@@ -4,13 +4,11 @@ import '../../styles/project-detail.css'
 import ProjectNav from '../../components/ui/ProjectNav'
 
 const IMGS = {
-  connexion: '/assets/projects/sentinel/connexion.png',
-  dashboard: '/assets/projects/sentinel/tableau-bord.png',
-  liste:     '/assets/projects/sentinel/tickets.png',
-  kanban:    '/assets/projects/sentinel/kanban.png',
-  pointage:  '/assets/projects/sentinel/pointage.png',
-  profil:    '/assets/projects/sentinel/profil.png',
-  org:       '/assets/projects/sentinel/organisation.png',
+  accueil:   '/assets/projects/sentinel/accueil.webp',
+  dashboard: '/assets/projects/sentinel/tableau-bord.webp',
+  projets:   '/assets/projects/sentinel/projets.webp',
+  org:       '/assets/projects/sentinel/organisation.webp',
+  profil:    '/assets/projects/sentinel/profil.webp',
 }
 
 const COLORS = [
@@ -44,7 +42,7 @@ export default function SentinelPage() {
     <>
       <Helmet>
         <title>Sentinel — Célia Antunes</title>
-        <meta name="description" content="Sentinel — Application web full-stack de gestion de tickets, pointage et TechHealth. ASP.NET Core, PostgreSQL, React, TypeScript." />
+        <meta name="description" content="Sentinel — Application web de surveillance de la sécurité des dépendances : scan des dépôts GitHub et GitLab, détection des vulnérabilités et note de santé de A à F par projet." />
       </Helmet>
 
       <motion.div
@@ -75,7 +73,7 @@ export default function SentinelPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.22 }}
               >
-                Application web de gestion de tickets
+                Surveillance de la sécurité des dépendances
               </motion.p>
 
               <motion.div
@@ -90,6 +88,20 @@ export default function SentinelPage() {
                 </div>
                 <p className="pd-meta__primary">Design d'interface<br />Expérience utilisateur</p>
                 <p className="pd-meta__secondary">Figma · Design système · Composants · Prototypage</p>
+                <a
+                  href="https://sentinelbase.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pd-visit-btn"
+                >
+                  <span>Visiter le site</span>
+                  <span className="pd-visit-btn__arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                  </span>
+                </a>
               </motion.div>
             </div>
 
@@ -100,7 +112,7 @@ export default function SentinelPage() {
               transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
             >
               <div className="sn-solo__frame">
-                <img src={IMGS.dashboard} alt="Sentinel — Tableau de bord" loading="lazy" />
+                <img src={IMGS.accueil} alt="Sentinel — Page d'accueil" loading="lazy" />
               </div>
             </motion.div>
 
@@ -117,7 +129,7 @@ export default function SentinelPage() {
           <div className="pd-wrap">
             <motion.div className="pd-overview-body" {...fadeUp(0)}>
               <p className="pd-overview-text">
-                Sentinel est une application web de gestion de tickets et de projets destinée aux équipes de développement. Elle centralise le suivi des incidents, la planification des tâches, le pointage et la surveillance de l'état technique des projets au sein d'une interface épurée. L'expérience a été pensée pour que chaque membre de l'équipe accède rapidement à l'information dont il a besoin, sans friction et sans changer d'outil.
+                Sentinel est une application web qui surveille la santé et la sécurité des dépendances des projets logiciels. Une fois les dépôts GitHub ou GitLab connectés, elle analyse automatiquement les dépendances de 12 écosystèmes (npm, PyPI, NuGet, Maven…), les croise avec les bases de vulnérabilités et repère les failles, les dépendances obsolètes et les runtimes en fin de vie. Chaque projet reçoit une note de A à F, lisible d'un coup d'œil par un développeur, un manager ou un client, sans expertise technique requise.
               </p>
             </motion.div>
 
@@ -125,49 +137,15 @@ export default function SentinelPage() {
               <motion.div className="pd-two-col__item" {...fadeUp(0)}>
                 <span className="pd-section-label">Problème</span>
                 <p className="pd-body-text">
-                  Les équipes de développement jonglent entre plusieurs outils pour gérer tickets, temps de travail et état technique des projets. Cette fragmentation ralentit le suivi, multiplie les allers-retours et nuit à la visibilité d'ensemble sur l'avancement réel du travail.
+                  La sécurité des dépendances est éclatée entre plusieurs outils spécialisés, qui surveillent chacun un signal isolé. Les équipes n'ont aucune vue d'ensemble de l'état de leurs projets, les runtimes en fin de vie passent souvent inaperçus et le suivi des corrections se fait dans un outil externe. Une faille peut ainsi rester longtemps en production avant d'être traitée.
                 </p>
               </motion.div>
               <motion.div className="pd-two-col__item" {...fadeUp(0.1)}>
                 <span className="pd-section-label">Solution</span>
                 <p className="pd-body-text">
-                  Une interface unifiée pensée pour réduire la charge cognitive : chaque vue est conçue pour donner une lecture immédiate de l'état du projet. Les informations sont hiérarchisées, les actions accessibles en un clic, et la navigation construite autour des flux de travail réels de l'équipe.
+                  Sentinel croise ces signaux en un seul scan et les traduit en une note de A à F, calculée sur 100 selon un barème transparent où chaque risque retire un nombre de points fixe. Les scans tournent automatiquement ou depuis la CI/CD, une alerte email part dès qu'une faille dépasse le seuil fixé, et tickets, SBOM et rapports sont générés dans l'outil.
                 </p>
               </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* ══ FEATURES ══ */}
-        <section className="pd-section" style={{ borderTop: 'none' }}>
-          <div className="pd-wrap">
-            <motion.span className="pd-section-label" {...fadeUp(0)}>Fonctionnalités</motion.span>
-            <div className="pd-features-grid">
-              {[
-                { num: '01', title: 'Tableau de bord', desc: 'Vue synthétique de l\'état de l\'équipe : tickets ouverts, urgences, activité récente et indicateurs clés en un coup d\'œil.' },
-                { num: '02', title: 'Vue Kanban', desc: 'Glisser-déposer les tickets entre colonnes de statut. Interface fluide pensée pour le travail quotidien en équipe.' },
-                { num: '03', title: 'Détail de ticket', desc: 'Fiche complète avec description, commentaires, pièces jointes et historique des modifications, tout au même endroit.' },
-                { num: '04', title: 'Pointage', desc: 'Saisie rapide du temps passé sur chaque ticket, avec récapitulatif hebdomadaire par membre de l\'équipe.' },
-                { num: '05', title: 'TechHealth', desc: 'Tableau de bord dédié à la santé des projets : dépendances obsolètes, vulnérabilités détectées et score global.' },
-                { num: '06', title: 'Paramètres', desc: 'Gestion de l\'organisation, des membres et de leurs rôles depuis une interface d\'administration claire et structurée.' },
-              ].map(({ num, title, desc }, i) => (
-                <motion.div
-                  key={num}
-                  {...fadeUp(i * 0.05)}
-                  style={{
-                    padding: '24px',
-                    border: '1px solid #E5E7EB',
-                    borderRadius: '12px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '10px',
-                  }}
-                >
-                  <span style={{ fontSize: 11, fontWeight: 600, color: '#5B4FE9', letterSpacing: '0.08em', textTransform: 'uppercase' }}>{num}</span>
-                  <strong style={{ fontSize: 15, fontWeight: 700, color: '#1E293B' }}>{title}</strong>
-                  <p style={{ fontSize: 13, lineHeight: 1.65, color: '#64748B', margin: 0 }}>{desc}</p>
-                </motion.div>
-              ))}
             </div>
           </div>
         </section>
@@ -179,68 +157,37 @@ export default function SentinelPage() {
 
             <div className="pd-screens">
 
-              {/* 00 — Connexion full */}
               <motion.div className="pd-scr pd-scr--full" {...fadeUp(0)}>
                 <div className="pd-scr__label">
                   <span className="pd-scr__num">1</span>
-                  <span className="pd-scr__name">Connexion</span>
-                </div>
-                <BrowserMock src={IMGS.connexion} alt="Page de connexion" className="pd-browser--full" />
-              </motion.div>
-
-              {/* 02 — Dashboard full */}
-              <motion.div className="pd-scr pd-scr--full" {...fadeUp(0)}>
-                <div className="pd-scr__label">
-                  <span className="pd-scr__num">2</span>
                   <span className="pd-scr__name">Tableau de bord</span>
                 </div>
                 <BrowserMock src={IMGS.dashboard} alt="Tableau de bord" className="pd-browser--full" />
               </motion.div>
 
-              {/* 03 + 04 — Liste + Kanban */}
-              <div className="pd-scr-row pd-scr-row--3-2">
-                <motion.div className="pd-scr" {...fadeUp(0)}>
-                  <div className="pd-scr__label">
-                    <span className="pd-scr__num">3</span>
-                    <span className="pd-scr__name">Liste des tickets</span>
-                  </div>
-                  <BrowserMock src={IMGS.liste} alt="Liste des tickets" />
-                </motion.div>
-                <motion.div className="pd-scr" {...fadeUp(0.1)}>
-                  <div className="pd-scr__label">
-                    <span className="pd-scr__num">4</span>
-                    <span className="pd-scr__name">Vue Kanban</span>
-                  </div>
-                  <BrowserMock src={IMGS.kanban} alt="Vue Kanban" />
-                </motion.div>
-              </div>
-
-              {/* 05 — Pointage full */}
               <motion.div className="pd-scr pd-scr--full" {...fadeUp(0)}>
                 <div className="pd-scr__label">
-                  <span className="pd-scr__num">5</span>
-                  <span className="pd-scr__name">Pointage</span>
+                  <span className="pd-scr__num">2</span>
+                  <span className="pd-scr__name">Projets</span>
                 </div>
-                <BrowserMock src={IMGS.pointage} alt="Pointage" className="pd-browser--full" />
+                <BrowserMock src={IMGS.projets} alt="Projets" className="pd-browser--full" />
               </motion.div>
 
-              {/* 06 + 07 — Settings */}
-              <div className="pd-scr-row pd-scr-row--1-1">
-                <motion.div className="pd-scr" {...fadeUp(0)}>
-                  <div className="pd-scr__label">
-                    <span className="pd-scr__num">6</span>
-                    <span className="pd-scr__name">Profil</span>
-                  </div>
-                  <BrowserMock src={IMGS.profil} alt="Paramètres profil" />
-                </motion.div>
-                <motion.div className="pd-scr" {...fadeUp(0.1)}>
-                  <div className="pd-scr__label">
-                    <span className="pd-scr__num">7</span>
-                    <span className="pd-scr__name">Organisation</span>
-                  </div>
-                  <BrowserMock src={IMGS.org} alt="Paramètres organisation" />
-                </motion.div>
-              </div>
+              <motion.div className="pd-scr pd-scr--full" {...fadeUp(0)}>
+                <div className="pd-scr__label">
+                  <span className="pd-scr__num">3</span>
+                  <span className="pd-scr__name">Organisation</span>
+                </div>
+                <BrowserMock src={IMGS.org} alt="Organisation" className="pd-browser--full" />
+              </motion.div>
+
+              <motion.div className="pd-scr pd-scr--full" {...fadeUp(0)}>
+                <div className="pd-scr__label">
+                  <span className="pd-scr__num">4</span>
+                  <span className="pd-scr__name">Profil</span>
+                </div>
+                <BrowserMock src={IMGS.profil} alt="Profil" className="pd-browser--full" />
+              </motion.div>
 
             </div>
           </div>

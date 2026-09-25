@@ -4,11 +4,13 @@ import '../../styles/project-detail.css'
 import ProjectNav from '../../components/ui/ProjectNav'
 
 const IMGS = {
-  home:      '/assets/projects/termetis/accueil.png',
-  danses:    '/assets/projects/termetis/danses.png',
-  creneaux:  '/assets/projects/termetis/creneaux.png',
-  equipe:    '/assets/projects/termetis/equipe.png',
-  actu:      '/assets/projects/termetis/actualites.png',
+  home:      '/assets/projects/termetis/accueil.webp',
+  danses:    '/assets/projects/termetis/danses.webp',
+  creneaux:  '/assets/projects/termetis/creneaux.webp',
+  equipe:    '/assets/projects/termetis/equipe.webp',
+  actu:      '/assets/projects/termetis/actualites.webp',
+  adminCours:  '/assets/projects/termetis/admin-cours.webp',
+  adminTarifs: '/assets/projects/termetis/admin-tarifs.webp',
 }
 
 const COLORS = [
@@ -88,17 +90,31 @@ export default function TermetisPage() {
                 </div>
                 <p className="pd-meta__primary">UI Design</p>
                 <p className="pd-meta__secondary">Figma · Site vitrine · Identité visuelle · Wireframes</p>
+                <a
+                  href="https://termetis.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pd-visit-btn"
+                >
+                  <span>Visiter le site</span>
+                  <span className="pd-visit-btn__arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                  </span>
+                </a>
               </motion.div>
             </div>
 
             <motion.div
-              className="pd-hero__right"
+              className="pd-hero__right pd-hero__right--tall"
               initial={{ opacity: 0, x: 32 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.18, ease: 'easeOut' }}
             >
               <BrowserMock src={IMGS.home}  alt="Termétis — Page d'accueil" className="pd-browser--primary" />
-              <BrowserMock src={IMGS.danses} alt="Termétis — Danses"        className="pd-browser--secondary" />
+              <BrowserMock src={IMGS.creneaux} alt="Termétis — Créneaux"   className="pd-browser--secondary pd-browser--spaced" />
             </motion.div>
 
           </div>
@@ -128,7 +144,7 @@ export default function TermetisPage() {
               <motion.div className="pd-two-col__item" {...fadeUp(0.1)}>
                 <span className="pd-section-label">Solution</span>
                 <p className="pd-body-text">
-                  J'ai conçu un site vitrine simple, lisible et engageant, mettant en avant les différentes danses, les cours, les intervenants et les actualités de l'association. L'identité visuelle a été développée à partir de leur logo existant, afin de refléter l'univers de Termétis et de créer une interface cohérente et attractive, donnant envie aux nouvelles danseuses de rejoindre l'association.
+                  J'ai conçu un site vitrine lisible et engageant, mettant en avant les différentes danses, les cours, les intervenants et les actualités de l'association. L'identité visuelle a été développée à partir de leur logo existant, afin de refléter l'univers de Termétis et de créer une interface cohérente et attractive, donnant envie aux nouvelles danseuses de rejoindre l'association.
                 </p>
               </motion.div>
             </div>
@@ -146,8 +162,8 @@ export default function TermetisPage() {
               </motion.p>
             </div>
             <div style={{ display: 'flex', gap: '4px', justifyContent: 'center' }}>
-              <motion.img {...fadeUp(0.05)} src="/assets/projects/termetis/wireframe-01.jpg" alt="Wireframe Termétis — accueil" style={{ width: '45%', height: '360px', objectFit: 'contain' }} />
-              <motion.img {...fadeUp(0.1)} src="/assets/projects/termetis/wireframe-02.png" alt="Wireframe Termétis — actualités" style={{ width: '45%', height: '360px', objectFit: 'contain' }} />
+              <motion.img {...fadeUp(0.05)} src="/assets/projects/termetis/wireframe-01.webp" alt="Wireframe Termétis — accueil" style={{ width: '45%', height: '360px', objectFit: 'contain' }} />
+              <motion.img {...fadeUp(0.1)} src="/assets/projects/termetis/wireframe-02.webp" alt="Wireframe Termétis — actualités" style={{ width: '45%', height: '360px', objectFit: 'contain' }} />
             </div>
           </div>
         </section>
@@ -205,6 +221,36 @@ export default function TermetisPage() {
                 <BrowserMock src={IMGS.actu} alt="Actualités" className="pd-browser--full" />
               </motion.div>
 
+            </div>
+          </div>
+        </section>
+
+        {/* ══ ESPACE MEMBRES & ADMINISTRATION ══ */}
+        <section className="pd-section pd-section--screens">
+          <div className="pd-wrap">
+            <div className="pd-label-row" style={{ marginBottom: '48px' }}>
+              <motion.span className="pd-section-label" {...fadeUp(0)}>Espace membres et administration</motion.span>
+              <motion.p className="pd-body-text" {...fadeUp(0.05)}>
+                Au-delà du site vitrine, le site intègre un espace réservé aux adhérentes. Les danseuses inscrites peuvent s'y connecter pour consulter les vidéos des chorégraphies travaillées en cours et déposer leurs propres vidéos, afin de réviser et partager entre adhérentes. Une partie administration permet également à l'association de gérer elle-même le contenu du site : les cours, les tarifs, les actualités ainsi que les comptes des utilisateurs.
+              </motion.p>
+            </div>
+
+            <div className="pd-screens">
+              <motion.div className="pd-scr pd-scr--full" {...fadeUp(0)}>
+                <div className="pd-scr__label">
+                  <span className="pd-scr__num">6</span>
+                  <span className="pd-scr__name">Gestion des cours</span>
+                </div>
+                <BrowserMock src={IMGS.adminCours} alt="Administration — gestion des cours" className="pd-browser--full" />
+              </motion.div>
+
+              <motion.div className="pd-scr pd-scr--full" {...fadeUp(0)}>
+                <div className="pd-scr__label">
+                  <span className="pd-scr__num">7</span>
+                  <span className="pd-scr__name">Gestion des tarifs</span>
+                </div>
+                <BrowserMock src={IMGS.adminTarifs} alt="Administration — gestion des tarifs" className="pd-browser--full" />
+              </motion.div>
             </div>
           </div>
         </section>

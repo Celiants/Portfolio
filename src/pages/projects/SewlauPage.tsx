@@ -4,8 +4,8 @@ import '../../styles/project-detail.css'
 import ProjectNav from '../../components/ui/ProjectNav'
 
 const IMGS = {
-  recto: '/assets/projects/sewlau/carte-recto.png',
-  verso: '/assets/projects/sewlau/carte-verso.png',
+  recto: '/assets/projects/sewlau/carte-recto.webp',
+  verso: '/assets/projects/sewlau/carte-verso.webp',
 }
 
 const COLORS = [

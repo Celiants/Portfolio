@@ -4,8 +4,8 @@ import '../../styles/project-detail.css'
 import ProjectNav from '../../components/ui/ProjectNav'
 
 const IMGS = {
-  carte: '/assets/projects/katlidev/carte-recto.png',
-  verso: '/assets/projects/katlidev/carte-verso.png',
+  carte: '/assets/projects/katlidev/carte-recto.webp',
+  verso: '/assets/projects/katlidev/carte-verso.webp',
 }
 
 const COLORS = [
@@ -157,7 +157,7 @@ export default function KatliDevPage() {
                 Nous avons donc réorienté le concept vers une silhouette de chat plus minimaliste et adaptable. Après plusieurs essais et ajustements de formes, de proportions et d'intégration typographique, nous avons trouvé une version plus équilibrée, capable de rester identifiable même en petit format.
               </motion.p>
             </div>
-            <motion.img {...fadeUp(0.1)} src="/assets/projects/katlidev/logo-recherche.png" alt="Recherche logo Katlidev" style={{ width: '65%', borderRadius: '8px', boxShadow: '0 4px 24px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06)', display: 'block', margin: '0 auto' }} />
+            <motion.img {...fadeUp(0.1)} src="/assets/projects/katlidev/logo-recherche.webp" alt="Recherche logo Katlidev" style={{ width: '65%', borderRadius: '8px', boxShadow: '0 4px 24px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06)', display: 'block', margin: '0 auto' }} />
           </div>
         </section>
 
@@ -170,7 +170,7 @@ export default function KatliDevPage() {
                 Une fois le logo validé, j'ai réalisé différentes déclinaisons pour assurer son utilisation sur plusieurs supports : versions en noir et blanc, adaptations pour petits formats, variations de contraste et tests de lisibilité. Cette étape permettait de garantir une identité visuelle cohérente et facilement exploitable dans tous les contextes de communication.
               </motion.p>
             </div>
-            <motion.img {...fadeUp(0.1)} src="/assets/projects/katlidev/logo-declinaisons.png" alt="Déclinaisons logo Katlidev" style={{ width: '65%', borderRadius: '8px', boxShadow: '0 4px 24px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06)', display: 'block', margin: '0 auto' }} />
+            <motion.img {...fadeUp(0.1)} src="/assets/projects/katlidev/logo-declinaisons.webp" alt="Déclinaisons logo Katlidev" style={{ width: '65%', borderRadius: '8px', boxShadow: '0 4px 24px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06)', display: 'block', margin: '0 auto' }} />
           </div>
         </section>
 
